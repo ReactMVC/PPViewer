@@ -8,7 +8,7 @@ Parch PDF Viewer
 
 ## Download Repository
 ```
-https://github.com/ReactMVC/PPViewer.git
+git clone https://github.com/ReactMVC/PPViewer.git
 ```
 ## Go to Repository Folder
 ```
