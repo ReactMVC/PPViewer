@@ -1,0 +1,50 @@
+{
+    "name": "ppv",
+    "version": "1.2.0",
+    "productName": "PPViewer",
+    "description": "Parch PDF Viewer",
+    "main": "src/js/main.js",
+    "scripts": {
+        "start": "electron .",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder",
+        "postinstall": "electron-builder install-app-deps"
+    },
+    "author": "Hossein Pira",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ReactMVC/PPViewer.git"
+    },
+    "dependencies": {
+        "custom-electron-titlebar": "^3.0.9"
+    },
+    "devDependencies": {
+        "custom-electron-titlebar": "^3.0.9",
+        "electron": "^5.0.4",
+        "electron-builder": "^21.1.1"
+    },
+    "build": {
+        "appId": "ppv",
+        "productName": "PPViewer",
+        "copyright": "Copyright (c) 2023 Hossein Pira",
+        "buildVersion": "1.2.0",
+        "win": {
+            "target": "NSIS",
+            "icon": "./src/assets/icons/win/icon.ico",
+            "fileAssociations": {
+                "ext": "pdf",
+                "icon": "./src/assets/icons/win/file.ico"
+            }
+        },
+        "nsis": {
+            "artifactName": "${productName}Setup.${ext}",
+            "uninstallDisplayName": "${productName}"
+        }
+    },
+    "keywords": [
+        "electron",
+        "pdf",
+        "reader"
+    ]
+}

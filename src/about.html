@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PPViewer - About</title>
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+    <div id='titlebar'></div>
+    <img id='logo' src='assets/images/logo.png' />
+    <div id='info'>
+        <div id='label'>PPViewer</div>
+        <div id='description'>Parch PDF Viewer</div>
+        <div id='stats'>
+            <div>Version: 1.2.0</div>
+            <div>Author: Hossein Pira</div>
+        </div>
+    </div>
+    <div id='close'>&times;</div>
+    <script>
+        const remote = require('electron').remote
+        document.getElementById('close').addEventListener('click', event => {
+            let window = remote.getCurrentWindow()
+            window.close()
+        })
+    </script>
+</body>
+
+</html>
